@@ -6,4 +6,4 @@
 
 ## Fox Configuration
 
-* [Introduction](Configuration/Intro.md)
+* [Introduction]
