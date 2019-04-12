@@ -1,7 +1,3 @@
----
-description: NeoDEEX 개발자 메뉴얼 대문 페이지(테스트)
----
-
 # Welcome
 
 NeoDEEX 개발자 메뉴얼에 오신것을 환영합니다. 이 문서는 개발자를 위한 NeoDEEX 설명서 입니다.

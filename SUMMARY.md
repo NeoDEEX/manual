@@ -6,4 +6,4 @@
 
 ## Fox Configuration
 
-* [Introduction](Configuration/README.md)
+* [Introduction](Configuration/Intro.md)
