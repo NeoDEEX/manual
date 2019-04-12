@@ -1,7 +1,9 @@
 # Table of contents
 
+## Introduction
+
 * [Welcome](README.md)
 
-* [Fox Configuration]
+## Fox Configuration
 
-  * Introduction (Configuration/README.md)
+* [Introduction](Configuration/README.md)
