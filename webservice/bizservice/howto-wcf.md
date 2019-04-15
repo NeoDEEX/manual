@@ -14,14 +14,14 @@
 
 1. New Project 메뉴를 선택하고 프로젝트 템플릿에서 ASP.NET Web Application 템플릿을 선택 합니다. 닷넷 프레임워크 버전은 4.5 이상이면 충분하지만 4.6 버전 이상을 사용하는 것이 좋습니다.
 
-    ![프로젝트 템플릿 선택](images/howto-wcf-1.png "프로젝트 템플릿 선택")
+![프로젝트 템플릿 선택](images/howto-wcf-1.png "프로젝트 템플릿 선택")
 
 2. ASP.NET Web Project 대화 상자에서 Empty 를 선택하고 확인을 클릭 합니다.
     * 웹 프로젝트에서 비즈 서비스 REST API 도 같이 제공하고자 한다면 Web API 옵션을 선택합니다.
     * 웹 프로젝트에서 HTML 컨텐츠를 제공하고자 한다면 MVC 옵션을 선택합니다.
     * Azure에 웹 사이트를 게시하고자 한다면 Azure 관련 옵션을 선택할 수 있습니다.
 
-    ![웹 어플리케이션 템플릿 선택](images/howto-wcf-2.png "웹 어플리케이션 템플릿 선택")
+![웹 어플리케이션 템플릿 선택](images/howto-wcf-2.png "웹 어플리케이션 템플릿 선택")
 
 ## 비즈 서비스 구성
 
@@ -29,7 +29,7 @@
 
 1. TheOne, TheOne.Data, TheOne.ServiceModel, TheOne.ServiceModel.Activation 어셈블리를 참조 추가 합니다.
 
-    ![비즈 서비스 어셈블리 추가](images/howto-wcf-3.png "비즈 서비스 어셈블리 추가")
+![비즈 서비스 어셈블리 추가](images/howto-wcf-3.png "비즈 서비스 어셈블리 추가")
 
 2. Web.config 구성 설정에 비즈 서비스를 추가 합니다.
 
@@ -54,7 +54,7 @@
 
 3. 웹 브라우저를 구동하여 비즈 서비스의 주소를 입력하고 다음과 유사한 WCF 서비스 정보가 나타나는지 확인합니다. 이 화면이 정상적으로 나타나면 비즈 서비스 구성이 정상적으로 완료된 것입니다.
 
-    ![비즈 서비스 구성 확인](images/howto-wcf-4.png "비즈 서비스 구성 확인")
+![비즈 서비스 구성 확인](images/howto-wcf-4.png "비즈 서비스 구성 확인")
 
 ## 비즈니스 클래스 작성
 
@@ -65,12 +65,12 @@
 
 1. 비즈니스 로직을 담기 위해 별도의 클래스 라이브러리 프로젝트를 솔루션에 추가 합니다.
 
-    ![비즈니스 로직 프로젝트 추가](images/howto-wcf-5.png "비즈니스 로직 프로젝트 추가")
-    ![비즈니스 로직 프로젝트 템플릿](images/howto-wcf-6.png "비즈니스 로직 프로젝트 템플릿")
+![비즈니스 로직 프로젝트 추가](images/howto-wcf-5.png "비즈니스 로직 프로젝트 추가")
+![비즈니스 로직 프로젝트 템플릿](images/howto-wcf-6.png "비즈니스 로직 프로젝트 템플릿")
 
 2. Fox Transaction을 사용하기 위해 TheOne, TheOne.Data, TheOne.Transactions 어셈블리를 참조 추가 합니다.
 
-    ![NeoDEEX 참조 추가](images/howto-wcf-7.png "NeoDEEX 참조 추가")
+![NeoDEEX 참조 추가](images/howto-wcf-7.png "NeoDEEX 참조 추가")
 
 3. 프로젝트 템플릿이 추가해 준 Class1.cs 파일을 제거 하고 BizClass.cs을 새로이 추가하고 다음과 같은 코드를 작성합니다. FoxBizClassAttribute와 FoxBizMethodAttribute를 사용하여 비즈 클래스와 비즈 메서드를 표시하고 있음에 주목하십시오.
 
