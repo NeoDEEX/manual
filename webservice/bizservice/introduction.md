@@ -1,11 +1,12 @@
 # Fox Biz Service 개요
+
 Fox Biz Service는 간단한 설정과 코드를 사용하여 서버 상에 존재하는 비즈니스 로직을 손쉽게 수행하고 그 결과를 받아 볼 수 있게 해 줍니다.
 
-## Why Fox Biz Service?
+## Why Fox Biz Service
 
 NeoDEEX 기반의 어플리케이션에서 서버 측 구현은 일반적으로 서비스 계층, 비즈니스 계층, 데이터 계층을 포함합니다. 서비스 계층은 WCF 서비스로 구성되어 클라이언트 호출을 수신합니다. 서비스 계층은 비즈니스 계층의 비즈니스 컴포넌트 혹은 데이터 액세스 컴포넌트를 생성하고 이 컴포넌트를 호출하여 클라이언트로부터 전송된 매개변수를 전달 합니다. 비즈니스 계층은 다시 데이터 계층(데이터베이스)을 액세스하고 그 결과를 서비스 계층으로 반환하며 서비스 계층은 다시 그 결과를 클라이언트에게 반환 합니다.
 
-![기본 서버 계층 구조](Images/TraditionalServerLayer.png "기본 서버 계층 구조")
+![기본 서버 계층 구조](images/traditional_server_layer.png "기본 서버 계층 구조")
 
 그러나 어플리케이션이 제공하는 **서버 기능의 절대 다수는 단순히 데이터베이스의 쿼리를 수행하고 그 결과를 반환하는 단순 서비스**입니다.
 비즈니스 로직이 존재하는 소수의 경우에도 서비스 계층은 단순히 클라이언트로부터 매개변수를 받아 비즈니스 로직 계층으로 전달하는 역할 만을 수행합니다. 따라서 개발자는 재미없고 지루한 WCF 서비스를 다수 작성해야 합니다.
@@ -20,7 +21,7 @@ Fox Biz Service(이하 비즈 서비스)는 NeoDEEX 4.5에서 제공하는 WCF/R
 
 비즈니스 로직을 구현하고 이 비즈니스 로직을 호출하기 위해 서비스 계층을 구현할 필요 없이 비즈 서비스를 호출하기만 하면 됩니다.
 
-![Fox Biz Service 기본 구조](images/FoxBizService.png "Fox Biz Service 기본 구조")
+![Fox Biz Service 기본 구조](images/foxbizservice.png "Fox Biz Service 기본 구조")
 
 비즈 서비스는 다음과 같은 주요 구성 요소를 가지고 있습니다.
 
@@ -29,38 +30,37 @@ Fox Biz Service(이하 비즈 서비스)는 NeoDEEX 4.5에서 제공하는 WCF/R
 서버와 클라이언트에서 모두 사용되는 구성 요소로서 TheOne.ServiceModel 어셈블리의 TheOne.ServiceModel.Biz 네임스페이스에 존재하는 클래스/인터페이스들 입니다. 다음은 주요 클래스/인터페이스들에 대한 간략한 설명 입니다.
 
 * IFoxBizService 인터페이스
-
-    * WCF를 사용하여 비즈 서비스를 호출하는 경우 사용하는 인터페이스 입니다.
+  * WCF를 사용하여 비즈 서비스를 호출하는 경우 사용하는 인터페이스 입니다.
 
 * DTO 객체들
 
-    * FoxBizRequest/FoxBizRequestCollection 클래스는 비즈 서비스가
+  * FoxBizRequest/FoxBizRequestCollection 클래스는 비즈 서비스가
     수행해야 할 비즈니스 로직 클래스/메서드 정보, 매개변수 등을 포함합니다.
 
-    * FoxBizResponse/FoxBizResponseCollection 클래스는 비즈 서비스가 비즈니스 로직 메서드를
+  * FoxBizResponse/FoxBizResponseCollection 클래스는 비즈 서비스가 비즈니스 로직 메서드를
     수행한 결과를 클라이언트에게 반환할 때 사용됩니다.
 
-    * FoxServiceParameter/FoxServiceParameterCollection 클래스는 FoxBizRequest 혹은
+  * FoxServiceParameter/FoxServiceParameterCollection 클래스는 FoxBizRequest 혹은
     FoxBizResponse 객체 내에서 매개변수를 전달하는데 사용되는 키/값을 저장 합니다.
 
 ### 서버 구성 요소
 
 서버 측에서 비즈 서비스를 구성하여 WCF 혹은 RESTful 서비스를 제공하는데 사용되는 클래스 입니다.
-상세한 서버 구성 방법은 [서버 구성 방법](ServerConfig.md)을 참고 하십시오. 
+상세한 서버 구성 방법은 [서버 구성 방법](serverconfig.md)을 참고 하십시오.
 
 * FoxBizService 클래스
 
-    * 비즈 서비스를 구현하는 핵심 클래스로서 WCF 서비스 클래스 입니다.
+  * 비즈 서비스를 구현하는 핵심 클래스로서 WCF 서비스 클래스 입니다.
 
-    * 개발자는 이 클래스를 직접 사용하거나 파생하여 일부 작동 방식을 커스터마이징 할 수 있습니다.
+  * 개발자는 이 클래스를 직접 사용하거나 파생하여 일부 작동 방식을 커스터마이징 할 수 있습니다.
 
 * FoxBizServiceController 클래스
 
-    * 비즈 서비스의 REST API 기능을 제공하는 Web API 컨트롤러 클래스 입니다.
+  * 비즈 서비스의 REST API 기능을 제공하는 Web API 컨트롤러 클래스 입니다.
 
 * FoxBizClassAttribute/FoxBizMethodAttribute
 
-    * 클라이언트가 호출할 수 있는 비즈니스 로직 클래스/메서드임을 명시하기 위한 Attribute 입니다.
+  * 클라이언트가 호출할 수 있는 비즈니스 로직 클래스/메서드임을 명시하기 위한 Attribute 입니다.
 
 ### 클라이언트 구성 요소
 
@@ -68,11 +68,11 @@ Fox Biz Service(이하 비즈 서비스)는 NeoDEEX 4.5에서 제공하는 WCF/R
 
 * FoxBizClient
 
-    * 비즈 서비스에 대한 WCF 클라이언트 기능을 제공합니다.
+  * 비즈 서비스에 대한 WCF 클라이언트 기능을 제공합니다.
 
 * FoxRestBizClient
 
-    * 비즈 서비스에 대한 REST API 클라이언트 기능을 제공합니다.
+  * 비즈 서비스에 대한 REST API 클라이언트 기능을 제공합니다.
 
 ## 비즈니스 로직 예제 코드
 
@@ -105,7 +105,7 @@ namespace Namespace
 
 ## 클라이언트 예제 코드
 
-다음은 WCF 기반 비즈 서비스를 호출하는 가장 간단한 예제 코드를 보여 줍니다. 
+다음은 WCF 기반 비즈 서비스를 호출하는 가장 간단한 예제 코드를 보여 줍니다.
 
 ```cs
 private async void button1_Click(object sender, EventArgs e)
@@ -150,9 +150,12 @@ private async void button2_Click(object sender, EventArgs e)
 비즈 서비스는 비즈니스 로직 클래스의 메서드를 수행하고 그 결과를 반환하기 위한 다음 메서드들을 제공합니다.
 
 * Execute 메서드
-    * 비즈니스 로직 메서드를 수행하고 그 결과를 object 로 반환합니다.
+
+  * 비즈니스 로직 메서드를 수행하고 그 결과를 object 로 반환합니다.
+
 * ExecuteMultiple 메서드
-    * 여러 Request 객체를 배열로 전송하여 여러 개의 비즈니스 로직 메서드를 순차적을 수행 합니다.
+
+  * 여러 Request 객체를 배열로 전송하여 여러 개의 비즈니스 로직 메서드를 순차적을 수행 합니다.
 
 ### 진단 기능
 
@@ -173,7 +176,8 @@ using(var client = new FoxBizClient("MyAddrName", "bizservice.svc"))
     }
 }
 ```
-```
+
+```log
 I 2017-04-17 14:56:57.75843 [FoxBizService] #00006:11183252#>> Biz Service Start: Execute  Requests=1  UserId=Tester#14467203  ClientMachine=MONSTERWORK  ClientIP=10.1.1.1;192.168.1.75  ClientMAC=0-15-5D-DB-A4-0;28-E3-47-50-B6-9A
 V 2017-04-17 14:56:57.76043 [FoxBizService] #00006:11183252#    Before Execute BizMethod: ClassId=Namespace.Class1  MethodId=Method1  Type=Namespace.Class1  Method=Method1  in-params=0
 V 2017-04-17 14:56:57.81088 [FoxBizService] #00006:11183252#    After Invoke: elpased = 50 msec, out-params:0

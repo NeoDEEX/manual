@@ -6,15 +6,15 @@
 
 ## Fox Configuration
 
-* [Introduction](Configuration/Intro.md)
+* [Introduction](configuration/intro.md)
 
 ## Fox Web Service
 
 ### Fox Biz Service
 
-* [Fox Biz Service 개요](/WebService/BizService/Introduction.md)
+* [Fox Biz Service 개요](webservice/bizservice/introduction.md)
 
-* [서버 구성](/WebService/BizService/ServerConfig.md)
+* [서버 구성](webservice/bizservice/serverconfig.md)
 
-  * [How To : WCF 서비스 구성](/WebService/BizService/Howto-WCF.md)
-  * [How To : REST API 서비스 구성](/WebService/BizService/Howto-REST.md)
+  * [How To : WCF 서비스 구성](webservice/bizservice/howto-wcf.md)
+  * [How To : REST API 서비스 구성](/webservice/bizservice/howto-rest.md)

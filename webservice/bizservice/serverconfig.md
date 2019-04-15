@@ -10,9 +10,9 @@ Fox Biz Service(이하 비즈 서비스)는 WCF 혹은 REST API를 사용하여 
 
 WCF를 사용하여 서버를 구축하는 방법은 여러 가지 방법이 있을 수 있습니다. WCF 자체가 웹 사이트(IIS)에서 호스팅 되거나 독립 호스트(.exe)로서 WCF 서비스를 제공할 수 있기 때문입니다. 이 문서는 가장 많이 사용되는 웹 사이트에서 비즈 서비스의 WCF 서비스를 구성하는 방법에 대해 살펴보도록 하겠습니다. 독립 호스트를 사용하는 방법은 다른 WCF 문서들을 참고하시길 바랍니다.
 
-WCF를 사용하는 비즈 서비스를 작성하는 구체적인 예제는 [How To : WCF 서비스 구성](Howto-WCF.md) 항목을 참고 하십시오.
+WCF를 사용하는 비즈 서비스를 작성하는 구체적인 예제는 [How To : WCF 서비스 구성](howto-wcf.md) 항목을 참고 하십시오.
 
-### 웹 사이트 기본 구성
+### WCF 웹 사이트 기본 구성
 
 비즈 서비스의 WCF 서비스를 웹 사이트에서 제공하기 위해서는 먼저 웹 사이트가 준비되어야 합니다. Visual Studio를 사용하여 새로운 웹 프로젝트를 작성하거나 기존 웹 프로젝트를 사용할 수 있으며, 이미 WCF를 사용 중인 기존 웹 사이트를 이용할 수도 있습니다.
 
@@ -41,10 +41,7 @@ WCF를 사용하는 비즈 서비스를 작성하는 구체적인 예제는 [How
 </configuration>
 ```
 
-위와 같은 설정은 IIS(혹은 IIS Express)에 호스팅되는 WCF 서비스의 기본 설정을 따르게 됩니다.
-즉, 바인딩으로 BasicHttpBinding을 사용하고 WSDL에 대한 HTTP GET을 허용하지 않는 등의 디폴트 설정이 사용됩니다. 
-따라서 BasicHttpBinding이 아닌 다른 바인딩을 사용하거나 WCF 서비스 Behavior를 적용하기 위해서는 WCF 서비스 구성의 표준 방법을 사용해야 합니다.
-다음은 WsHttpBinding을 사용하고 WSDL에 대한 HTTP GET을 지원하는 WCF 서비스 구성 방법을 보여줍니다.
+위와 같은 설정은 IIS(혹은 IIS Express)에 호스팅되는 WCF 서비스의 기본 설정을 따르게 됩니다. 즉, 바인딩으로 BasicHttpBinding을 사용하고 WSDL에 대한 HTTP GET을 허용하지 않는 등의 디폴트 설정이 사용됩니다. 따라서 BasicHttpBinding이 아닌 다른 바인딩을 사용하거나 WCF 서비스 Behavior를 적용하기 위해서는 WCF 서비스 구성의 표준 방법을 사용해야 합니다. 다음은 WsHttpBinding을 사용하고 WSDL에 대한 HTTP GET을 지원하는 WCF 서비스 구성 방법을 보여줍니다.
 
 ```xml
 <configuration>
@@ -73,7 +70,7 @@ WCF를 사용하는 비즈 서비스를 작성하는 구체적인 예제는 [How
 </configuration>
 ```
 
->주) <service> 항목의 name 속성이 클래스 이름이 아닌 것에 주의 하십시오. 비즈 서비스의 WCF 서비스 구성 설정은 클래스 이름이 아닌 FoxBizService라는 구성 설정 이름이 사용됩니다.
+>주) `<service>` 항목의 name 속성이 클래스 이름이 아닌 것에 주의 하십시오. 비즈 서비스의 WCF 서비스 구성 설정은 클래스 이름이 아닌 FoxBizService라는 구성 설정 이름이 사용됩니다.
 
 NeoDEEX는 WCF 서비스들을 위해 표준적인 방법으로 바인딩 맵(binding map)을 지원합니다.
 바인딩 맵은 다수의 WCF 서비스가 공통으로 사용하는 설정을 기본값으로 제공하여 web.config에서 WCF 서비스에 관련된 구성 설정을 크게 줄여 줍니다.
@@ -126,10 +123,9 @@ NeoDEEX는 WCF 서비스들을 위해 표준적인 방법으로 바인딩 맵(bi
 </theone.configuration>
 ```
 
->주) 닷넷 표준 구성 파일의 제약으로 인해 <serviceActivations> 항목을 통해 서비스를 구성하는 경우, factory 속성에는 ServiceHostFactory에서 파생된 클래스 이름만을 넣을 수 있습니다. 따라서 기본 바인딩 맵(defaultBindingMap)만이 비즈 서비스에 적용됩니다. 기본 바인딩 맵이 아닌 다른 바인딩 맵을 사용해야 하는 경우에는 <serviceActivations> 대신 전통적인 방법대로 .svc 파일을 만들고 @ServiceHost 디렉티브의 Factory 속성에 FoxServiceHostFactory 클래스 이름과 바인딩 맵 이름을 ; 문자로 구분하여 표시하면 됩니다.
+>주) 닷넷 표준 구성 파일의 제약으로 인해 `<serviceActivations>` 항목을 통해 서비스를 구성하는 경우, factory 속성에는 ServiceHostFactory에서 파생된 클래스 이름만을 넣을 수 있습니다. 따라서 기본 바인딩 맵(defaultBindingMap)만이 비즈 서비스에 적용됩니다. 기본 바인딩 맵이 아닌 다른 바인딩 맵을 사용해야 하는 경우에는 `<serviceActivations>` 대신 전통적인 방법대로 .svc 파일을 만들고 @ServiceHost 디렉티브의 Factory 속성에 FoxServiceHostFactory 클래스 이름과 바인딩 맵 이름을 ; 문자로 구분하여 표시하면 됩니다.
 >
->    <%@ServiceHost Service="TheOne.ServiceModel.Biz.FoxBizService"
->                   Factory="TheOne.ServiceModel.Activation.FoxServiceHostFactory;MyBindingMap" %>
+> <%@ServiceHost Service="TheOne.ServiceModel.Biz.FoxBizService" Factory="TheOne.ServiceModel.Activation.FoxServiceHostFactory;MyBindingMap" %>
 >
 >**바인딩 맵이 다수의 WCF 구성 설정을 간편하게 하기 위한 목적이지만 비즈 서비스는 단일 WCF 서비스를 사용하기 때문에 바인딩 맵을 사용하려고 노력할 필요는 없습니다.**
 
@@ -139,9 +135,9 @@ NeoDEEX는 WCF 서비스들을 위해 표준적인 방법으로 바인딩 맵(bi
 사용할 수 있도록 해줍니다. 비즈 서비스의 REST API는 ASP.NET Web API 2를 사용하여 구현되었습니다.
 따라서 REST API를 사용하기 위해서는 Web API 구성이 선행되어야 합니다.
 
-비즈 서비스 REST API를 작성하는 구체적인 예제는 [How To : REST API 구성](Howto-REST.md) 항목을 참고 하십시오.
+비즈 서비스 REST API를 작성하는 구체적인 예제는 [How To : REST API 구성](howto-rest.md) 항목을 참고 하십시오.
 
-### 웹 사이트 기본 구성
+### Web API 웹 사이트 기본 구성
 
 웹 사이트가 Web API를 지원하도록 하기 위해서는 Web API에 관련된 몇 가지 어셈블리(System.Net.Http.Formatting,
 System.Net.Http, System.Net.Web.WebHost 등)를 참조해야 하며 Global.asax, Global.asax.cs, WebApiConfig.cs 등
@@ -204,9 +200,7 @@ namespace Namespace
 }
 ```
 
-비즈 서비스는 NeoDEEX 구성 설정의 <service/bizService> 요소에서 나열된 비즈니스 로직 모듈들에서 
-비즈니스 로직 클래스들을 찾습니다.
-다음 구성 설정은 MyBizModule.dll 내에 포함된 public 클래스들 중 FoxBizClassAttribute가 설정된 모든 클래스들을
+비즈 서비스는 NeoDEEX 구성 설정의 <service/bizService> 요소에서 나열된 비즈니스 로직 모듈들에서 비즈니스 로직 클래스들을 찾습니다. 다음 구성 설정은 MyBizModule.dll 내에 포함된 public 클래스들 중 FoxBizClassAttribute가 설정된 모든 클래스들을
 비즈니스 로직 클래스로써 사용하게 됩니다.
 
 ```xml
