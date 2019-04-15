@@ -60,7 +60,8 @@ public class Global : System.Web.HttpApplication
 
     ![REST API 관련 어셈블리 참조 추가](images/Howto-REST-5.png "REST API 관련 어셈블리 참조 추가")
 
-2. WebApiConfig.cs 파일을 열고 REST API를 위한 URL 라우팅 설정을 추가하거나 기존 설정을 변경 합니다. 다음은 ~/api/bizservice 에서 REST API를 서비스하도록 라우팅을 설정하는 예제 코드 입니다. 비즈 서비스 REST API는 단일 Web API 컨트롤러만을 사용하므로 {controller} 와 같은 템플릿을 사용할 필요가 없습니다. 
+2. WebApiConfig.cs 파일을 열고 REST API를 위한 URL 라우팅 설정을 추가하거나 기존 설정을 변경 합니다. 다음은 ~/api/bizservice 에서 REST API를 서비스하도록 라우팅을 설정하는 예제 코드 입니다. 비즈 서비스 REST API는 단일 Web API 컨트롤러만을 사용하므로 {controller} 와 같은 템플릿을 사용할 필요가 없습니다.
+
 ```cs
 public static class WebApiConfig
 {
@@ -76,6 +77,7 @@ public static class WebApiConfig
     }
 }
 ```
+
 > 주) REST API를 위한 Web API 컨트롤러 클래스는 FoxBizServiceController 클래스 입니다. 하지만 컨트롤러의 이름은 Controller 접미사를 포함하지 않습니다. 따라서 위 라우팅 설정에서 컨트롤러의 이름으로 FoxBizService라는 이름이 사용되었습니다.
 
 ## REST API 클라이언트 작성
@@ -126,6 +128,6 @@ namespace BizServiceClient
 }
 ```
 
-# Summary
+## Summary
 
 REST API는 인터넷에서 플랫폼에 무관하게 사용할 수 있는 HTTP와 JSON 기반의 RESTful 서비스를 제공하기 때문에 다양한 클라이언트들이 비즈 서비스를 사용할 수 있도록 해줍니다. WCF 기반 비즈 서비스에 비해 구성 방법이 상대적으로 간단하지만 동등한 기능을 제공할 뿐만 아니라 JSON 포맷 덕택에 더 빠르고 작은 데이터를 송/수신 하게 됩니다.
