@@ -16,14 +16,14 @@
 
 1. 웹 프로젝트에서 추가 메뉴를 선택하고 스캐폴드 추가(New Scaffolded Item) 메뉴를 선택 합니다.
 
-![스캐폴드 추가](images/howto-rest-1.png "스캐폴드 항목 추가 메뉴")
+    ![스캐폴드 추가](images/howto-rest-1.png "스캐폴드 항목 추가 메뉴")
 
 2. 스캐폴드 추가 대화 상자에서 "Web API 2 Controller - Empty"를 선택하고 추가 버튼을 클릭 합니다.
 컨트롤러 추가 대화 상자가 나타나면 추가 버튼을 클릭 합니다.
 
-![스캐폴드 추가 대화 상자](images/howto-rest-2.png "스캐폴드 추가 대화 상자")
+    ![스캐폴드 추가 대화 상자](images/howto-rest-2.png "스캐폴드 추가 대화 상자")
 
-![컨트롤러 추가 대화 상자](images/howto-rest-3.png "컨트롤러 추가 대화 상자")
+    ![컨트롤러 추가 대화 상자](images/howto-rest-3.png "컨트롤러 추가 대화 상자")
 
     * Web API 스캐폴드 추가 메뉴는 Web API에 필요한 어셈블리들을 NuGet 서버로부터 추가해 주며, Global.asax, Global.asax.cs, WebApiConfig.cs 파일과 필요한 디렉터리들을 생성해 줍니다.
 
@@ -32,7 +32,7 @@
 
 3. 컨트롤러 추가에 의해 새로이 추가된 컨트롤러 클래스(이 예제의 경우 DefaultController.cs)는 사용되지 않으므로 삭제 합니다. 설정이 완료된 웹 프로젝트는 다음과 비슷한 구조를 갖게 됩니다.
 
-![Web API가 활성화된 프로젝트](images/howto-rest-4.png "Web API가 활성화된 프로젝트")
+    ![Web API가 활성화된 프로젝트](images/howto-rest-4.png "Web API가 활성화된 프로젝트")
 
 > 주) 스캐폴드 추가 시 Global.asax.cs 파일이 이미 존재하는 경우, 이 파일에 적절한 변경이 수행되지 않을 수 있습니다. 따라서 Global.asax.cs 파일의 Application_Start 메서드의 존재 여부를 확인하고 Web API 초기화 코드와 비즈 서비스 초기화 코드가 모두 존재하는지 확인해야 합니다. 만약 다음과 같은 코드가 존재하지 않는다면 수동으로 추가해 넣도록 합니다.
 
@@ -58,7 +58,7 @@ public class Global : System.Web.HttpApplication
 
 1. NeoDEEX.ServiceModel.Web, NeoDEEX.ServiceModel.Web.Http 어셈블리를 참조 합니다. [WCF를 사용하는 비즈 서비스 구성 예제](howto-wcf.md)에서 작성한 웹 프로젝트를 사용하지 않고 새로이 웹 프로젝트를 생성했다면 TheOne, TheOne.Data, TheOne.ServiceModel, TheOne.ServiceModel.Activation 어셈블리도 참조를 추가해야 합니다.
 
-![REST API 관련 어셈블리 참조 추가](images/howto-rest-5.png "REST API 관련 어셈블리 참조 추가")
+    ![REST API 관련 어셈블리 참조 추가](images/howto-rest-5.png "REST API 관련 어셈블리 참조 추가")
 
 2. WebApiConfig.cs 파일을 열고 REST API를 위한 URL 라우팅 설정을 추가하거나 기존 설정을 변경 합니다. 다음은 ~/api/bizservice 에서 REST API를 서비스하도록 라우팅을 설정하는 예제 코드 입니다. 비즈 서비스 REST API는 단일 Web API 컨트롤러만을 사용하므로 {controller} 와 같은 템플릿을 사용할 필요가 없습니다.
 
@@ -86,11 +86,11 @@ public static class WebApiConfig
 
 1. NuGet 패키지 관리자를 구동하여 클라이언트 프로젝트에 Microsoft.AspNet.WebApi.Client 패키지를 설치 합니다.
 
-![NuGet 패키지 설치](images/howto-rest-6.png "NuGet 패키지 설치")
+    ![NuGet 패키지 설치](images/howto-rest-6.png "NuGet 패키지 설치")
 
 2. REST API 클라이언트를 위한 NeoDEEX 어셈블리를 추가 합니다. 필요한 어셈블리는 TheOne, TheOne.ServiceModel, NeoDEEX.ServiceModel.Web 입니다.
 
-![REST API 관련 어셈블리 참조 추가](images/howto-rest-7.png "REST API 관련 어셈블리 참조 추가")
+    ![REST API 관련 어셈블리 참조 추가](images/howto-rest-7.png "REST API 관련 어셈블리 참조 추가")
 
 3. FoxRestBizClient 클래스를 사용하여 서비스를 호출합니다. REST API의 URI는 Web API 라우팅 설정에 사용했던 상대 주소를 사용하면 됩니다. 다음 코드는 WCF 기반 비즈 서비스와 비즈 서비스 REST API를 모두 호출하는 클라이언트 예제를 보여주고 있습니다.
 
