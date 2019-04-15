@@ -1,2 +1,0 @@
-# Introduction \(Configuration/README.md\)
-
