@@ -12,7 +12,7 @@ Fox UI Model에서 메뉴에 의해 표시되는 개별 화면을 뷰라고 합�
 
 ## FoxViewModel
 
-`FoxViewModel` 클래스는 뷰와 1대 1로 대응되는 뷰에 대한 메타 정보 객체 입니다. [FoxMenuViewModel](menuview.md#FoxMenuViewModel)은 뷰를 생성하기 위해 먼저 `FoxViewModel` 객체를 생성하며 이 객체에 메뉴 정보인 [FoxMenuItem](menudata#FoxMenuItem) 객체와 뷰를 나타내는 [IFoxView](#IFoxView) 인터페이스 객체를 각각 `MenuInfo`, `View` 속성에 기록해 둡니다. `FoxViewModel` 객체를 구하면 메뉴 정보, 뷰 정보에 모두 접근할 수 있습니다.
+`FoxViewModel` 클래스는 뷰와 1대 1로 대응되는 뷰에 대한 메타 정보 객체 입니다. [FoxMenuViewModel](menuview.md#FoxMenuViewModel)은 뷰를 생성하기 위해 먼저 `FoxViewModel` 객체를 생성하며 이 객체에 메뉴 정보인 [FoxMenuItem](menudata.md#FoxMenuItem) 객체와 뷰를 나타내는 [IFoxView](#IFoxView) 인터페이스 객체를 각각 `MenuInfo`, `View` 속성에 기록해 둡니다. `FoxViewModel` 객체를 구하면 메뉴 정보, 뷰 정보에 모두 접근할 수 있습니다.
 
 다음은 FoxViewModel 객체의 주요 속성들 입니다.
 
