@@ -428,7 +428,7 @@ static void Main()
 
 전역 예외 핸들러를 통해 어플리케이션 종료 대신 다음과 같은 대화 상자를 표시하게 됩니다.
 
-![오류 화면](images/menuview-2.png)  
+![화면 개수 초과 오류 화면](images/menuview-2.png)  
 [그림2. 화면 개수 초과 오류 화면]
 
 열려 있는 뷰의 개수는 메뉴 뷰를 통해 구할 수 있습니다. 즉, `IFxMenuView.GetViewCount` 메서드를 호출해야 합니다. `IFxMenuView` 인터페이스는 `FoxMenuViewModel` 클래스의 `MenuView` 속성을 통해 알아 낼 수 있습니다.
