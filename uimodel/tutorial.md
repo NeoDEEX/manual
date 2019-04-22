@@ -5,11 +5,11 @@
 목차
 
 * [개요](#개요)
-* [STEP 1 - 메뉴 뷰 뼈대 작성](STEP%201%20-%20%EB%A9%94%EB%89%B4%20%EB%B7%B0%20%EB%BC%88%EB%8C%80%20%EC%9E%91%EC%84%B1)
-* [STEP 2 - 메뉴 로드 및 메뉴 표시](STEP%202%20-%20%EB%A9%94%EB%89%B4%20%EB%A1%9C%EB%93%9C%20%EB%B0%8F%20%EB%A9%94%EB%89%B4%20%ED%91%9C%EC%8B%9C)
-* [STEP 3 – 뷰 작성](#STEP%203%20%E2%80%93%20%EB%B7%B0%20%EC%9E%91%EC%84%B1)
-* [STEP 4 – 메뉴 선택 처리 및 뷰 표시](#STEP%204%20%E2%80%93%20%EB%A9%94%EB%89%B4%20%EC%84%A0%ED%83%9D%20%EC%B2%98%EB%A6%AC%20%EB%B0%8F%20%EB%B7%B0%20%ED%91%9C%EC%8B%9C)
-* [STEP Bonus – 기능 추가](#STEP%20Bonus%20%E2%80%93%20%EA%B8%B0%EB%8A%A5%20%EC%B6%94%EA%B0%80)
+* [STEP 1 - 메뉴 뷰 뼈대 작성](#STEP-1---메뉴-뷰-뼈대-작성)
+* [STEP 2 - 메뉴 로드 및 메뉴 표시](#STEP-2---메뉴-로드-및-메뉴-표시)
+* [STEP 3 – 뷰 작성](#STEP-3-–-뷰-작성)
+* [STEP 4 – 메뉴 선택 처리 및 뷰 표시](#STEP-4-–-메뉴-선택-처리-및-뷰-표시)
+* [STEP Bonus – 기능 추가](#STEP-Bonus-–-기능-추가)
 
 ## 개요
 
@@ -41,7 +41,7 @@
 
 ## STEP 1 - 메뉴 뷰 뼈대 작성
 
-[STEP 1 예제 코드 보러 가기](https://github.com/NeoDEEX/Samples/tree/master/UIModel/Fox%20UI%20Model%20Sample%20-%20Step%20by%20Step/MenuSample%20-%20Step%201)
+[STEP 1 예제 코드 보러 가기](https%3A%2F%2Fgithub.com%2FNeoDEEX%2FSamples%2Ftree%2Fmaster%2FUIModel%2FFox%20UI%20Model%20Sample%20-%20Step%20by%20Step%2FMenuSample%20-%20Step%201)
 
 메뉴 뷰는 `IFoxMenuView` 인터페이스를 구현하는 UI 객체이므로 MainForm에 `IFoxMenuView` 인터페이스를 구현합니다. `TheOne.UIModel` 네임스페이스를 참조하고, `MainForm` 클래스가 `IFoxMenuView` 인터페이스를 구현하도록 다음과 같이 코드를 작성합니다.
 
@@ -106,11 +106,11 @@ public partial class MainForm : Form, IFoxMenuView
 
 ## STEP 2 - 메뉴 로드 및 메뉴 표시
 
-[STEP 2 예제 코드 보러 가기](https://github.com/NeoDEEX/Samples/tree/master/UIModel/Fox%20UI%20Model%20Sample%20-%20Step%20by%20Step/MenuSample%20-%20Step%202)
+[STEP 2 예제 코드 보러 가기](https%3A%2F%2Fgithub.com%2FNeoDEEX%2FSamples%2Ftree%2Fmaster%2FUIModel%2FFox%20UI%20Model%20Sample%20-%20Step%20by%20Step%2FMenuSample%20-%20Step%202)
 
 이제 메뉴 데이터를 작성하고 로드하고 표시하는 방법에 대해 살펴볼 것입니다. Fox UI Model은 계층적인 구조의 메뉴를 위한 데이터 구조를 제공합니다. 이 데이터 구조는 `FoxMenuManager` 클래스에 의해 관리됩니다. `FoxMenuManager` 클래스는 메뉴 데이터를 로드하고 로드된 메뉴 데이터를 `FoxMenuItem` 객체의 계층 구조로 관리합니다.
 
-Fox UI Model의 메뉴 데이터는 [메뉴 XML](menudata.md#%EB%A9%94%EB%89%B4%20XML) 이라 불리는 XML로 표현됩니다. 메뉴 XML은 `<menuTree>` 요소와 `<menuItem>` 요소로 구성된 매우 간단한 스키마 구조를 가지고 있습니다. 메뉴 XML은 루트 요소로 `<menuTree>` 요소를 사용하고 하위에 중첩된 `<menuItem>` 요소를 가질 수 있습니다.
+Fox UI Model의 메뉴 데이터는 [메뉴 XML](menudata.md#메뉴-XML) 이라 불리는 XML로 표현됩니다. 메뉴 XML은 `<menuTree>` 요소와 `<menuItem>` 요소로 구성된 매우 간단한 스키마 구조를 가지고 있습니다. 메뉴 XML은 루트 요소로 `<menuTree>` 요소를 사용하고 하위에 중첩된 `<menuItem>` 요소를 가질 수 있습니다.
 
 ```xml
 <?xml version="1.0" encoding="utf-8" ?>
@@ -207,7 +207,7 @@ public partial class MainForm : Form, IFoxMenuView
 
 ## STEP 3 – 뷰 작성
 
-[STEP 3 예제 코드 보러 가기](https://github.com/NeoDEEX/Samples/tree/master/UIModel/Fox%20UI%20Model%20Sample%20-%20Step%20by%20Step/MenuSample%20-%20Step%203)
+[STEP 3 예제 코드 보러 가기%5D(https%3A%2F%2Fgithub.com%2FNeoDEEX%2FSamples%2Ftree%2Fmaster%2FUIModel%2FFox%20UI%20Model%20Sample%20-%20Step%20by%20Step%2FMenuSample%20-%20Step%203)
 
 메뉴가 선택될 때 나타나는 개별 화면을 Fox UI Model에서는 뷰(view)라고 지칭합니다. 뷰는 [IFoxView](view.md#IFoxView) 인터페이스를 구현하는 UI 객체 입니다. WinForm 메뉴 환경이라면 `IFoxView` 인터페이스를 구현하는 `Form` 이나 `UserControl` 객체가 뷰가 될 것입니다 . 메뉴 뷰 모델(`FoxMenuViewModel`) 객체는 메뉴 정보를 통해 뷰 객체를 생성하고 뷰에 대한 정보를 뷰 모델(`FoxViewModel`) 객체에 기록하고 관리합니다. 메뉴 뷰 모델은 메뉴 뷰(`MainForm`)에게 생성된 뷰를 화면에 표시하도록 요청합니다.
 
@@ -264,7 +264,7 @@ public partial class SampleForm1 : FoxForm
 
 ### 메뉴 XML 수정
 
-메뉴가 선택되었을 때 어떤 화면이 로드 될 것인가는 메뉴 XML의 [`<menuItem>`](menudata.md#%3CmenuItem%3E%20%EC%9A%94%EC%86%8C) 요소의 `url` 속성과 `class` 속성에 의해 결정됩니다. 앞서 STEP 2에서 작성한 메뉴 XML에는 단순히 메뉴의 이름만을 표시하였었습니다. 이제 메뉴 XML을 수정하여 어떤 메뉴가 어떤 화면을 로드하는 가를 지정해 주어야 합니다. 다음은 변경된 메뉴 XML을 보여 줍니다.
+메뉴가 선택되었을 때 어떤 화면이 로드 될 것인가는 메뉴 XML의 [`<menuItem>`](menudata.md#menuItem-요소) 요소의 `url` 속성과 `class` 속성에 의해 결정됩니다. 앞서 STEP 2에서 작성한 메뉴 XML에는 단순히 메뉴의 이름만을 표시하였었습니다. 이제 메뉴 XML을 수정하여 어떤 메뉴가 어떤 화면을 로드하는 가를 지정해 주어야 합니다. 다음은 변경된 메뉴 XML을 보여 줍니다.
 
 ```xml
 <?xml version="1.0" encoding="utf-8" ?>

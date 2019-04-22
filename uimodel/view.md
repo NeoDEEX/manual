@@ -8,7 +8,7 @@ Fox UI Model에서 메뉴에 의해 표시되는 개별 화면을 뷰라고 합�
 
 * [FoxViewModel](#FoxViewModel)
 * [IFoxView](#IFoxView)
-* [메뉴 네비게이션](#%EB%A9%94%EB%89%B4%20%EB%84%A4%EB%B9%84%EA%B2%8C%EC%9D%B4%EC%85%98)
+* [메뉴 네비게이션](#메뉴-네비게이션)
 
 ## FoxViewModel
 
@@ -52,7 +52,7 @@ Fox UI Model에서 메뉴에 의해 표시되는 개별 화면을 뷰라고 합�
 
     추후 설명할 메뉴 네비게이션에서 이동 가능한 다음 뷰 혹은 이전 뷰를 나타내는 뷰 Id를 반환합니다.
 
-`FoxViewModel` 객체는 웹 브라우저가 웹 페이지들을 전/후로 이동하는 것과 비슷하게 메뉴 사이를 이동하는 [메뉴 네비게이션](#%EB%A9%94%EB%89%B4%20%EB%84%A4%EB%B9%84%EA%B2%8C%EC%9D%B4%EC%85%98) 기능을 제공합니다. 메뉴 네비게이션 기능은 `FoxViewModel` 객체가 제공하는 `Navigate`, `GoBack`, `MoveTo`, `ReplaceTo` 메서드를 통해 제공됩니다. 메뉴 네비게이션 기능에 대해서는 추후 별도로 설명하겠습니다.
+`FoxViewModel` 객체는 웹 브라우저가 웹 페이지들을 전/후로 이동하는 것과 비슷하게 메뉴 사이를 이동하는 [메뉴 네비게이션](#메뉴-네비게이션) 기능을 제공합니다. 메뉴 네비게이션 기능은 `FoxViewModel` 객체가 제공하는 `Navigate`, `GoBack`, `MoveTo`, `ReplaceTo` 메서드를 통해 제공됩니다. 메뉴 네비게이션 기능에 대해서는 추후 별도로 설명하겠습니다.
 
 ## IFoxView
 
@@ -60,7 +60,7 @@ Fox UI Model에서 메뉴에 의해 표시되는 개별 화면을 뷰라고 합�
 
 `IFoxView` 인터페이스는 UI 프레임워크에 독립적으로 구현된 [FoxMenuViewModel](menuview.md#FoxMenuViewModel)이 뷰에 접근할 때 호출되는 메서드/속성들과 비동기 호출 시 프로그래스(progress) UI 표시 지원을 위한 메서드들로 구성되어 있습니다.
 
-일반적으로 `IFoxView` 인터페이스를 일반 개발자가 직접 구현해야 하는 경우는 없습니다. 이미 `IFoxView` 인터페이스를 구현하고 있는 [FoxForm](/winform/foxform.md) 클래스를 사용하거나 프레임워크 커스터마이징 단계에서 NeoDEEX 전문가가 이 인터페이스를 구현하는 베이스 클래스를 작성하고, 일반 개발자는 이들 베이스 클래스에서 파생된 개별 뷰를 작성하는 것이 일반적입니다.
+일반적으로 `IFoxView` 인터페이스를 일반 개발자가 직접 구현해야 하는 경우는 없습니다. 이미 `IFoxView` 인터페이스를 구현하고 있는 [FoxForm](/winform/foxform.md#FoxForm) 클래스를 사용하거나 프레임워크 커스터마이징 단계에서 NeoDEEX 전문가가 이 인터페이스를 구현하는 베이스 클래스를 작성하고, 일반 개발자는 이들 베이스 클래스에서 파생된 개별 뷰를 작성하는 것이 일반적입니다.
 
 `IFoxView` 인터페이스는 다음과 같은 속성과 메서드로 구성되어 있습니다.
 
@@ -114,7 +114,7 @@ public partial class SampleForm1 : FoxForm
 
 `Navigate` 메서드는 2개의 매개변수를 갖습니다. 첫번째 매개변수는 네비게이트 대상이 되는 뷰의 메뉴 Id이며 두번째 매개변수는 뷰가 열리거나 활성화될 때 전달할 매개변수 객체입니다. `Navigate` 메서드가 호출되면 `FoxMenuViewModel` 객체는 열려 있는 뷰들을 확인합니다. 만약 Navigate 메서드가 열고자 하는 뷰가 이미 열려 있다면 해당 뷰를 활성화(activate) 합니다. 뷰가 열려 있지 않다면 새로운 뷰를 열게 됩니다.
 
-`FoxMenuViewModel`은 뷰가 열려 있는지 여부에 상관없이 `IFoxView.DoInitialize` 메서드를 호출합니다. 이 메서드는 메뉴 선택([SelectMenu](menuview.md#%EB%A9%94%EB%89%B4%20Action%20-%20Open))에 의해 뷰가 열릴 때에도 호출됩니다. 두 상황에서 다른점은 `IFoxView.DoInitialize` 메서드로 전달되는 매개변수입니다. 메뉴 선택에 의해 `DoInitialize` 메서드가 호출되는 경우 매개변수는 항상 null 이지만 메뉴 네비게이트에 의해 `DoInitialize` 메서드가 호출된 경우에는 메뉴 네비게이트 메서드들(`Navigate`, `MoveTo` 등)이 전달한 매개변수가 전달됩니다.
+`FoxMenuViewModel`은 뷰가 열려 있는지 여부에 상관없이 `IFoxView.DoInitialize` 메서드를 호출합니다. 이 메서드는 메뉴 선택([SelectMenu](menuview.md#메뉴-Action---Open))에 의해 뷰가 열릴 때에도 호출됩니다. 두 상황에서 다른점은 `IFoxView.DoInitialize` 메서드로 전달되는 매개변수입니다. 메뉴 선택에 의해 `DoInitialize` 메서드가 호출되는 경우 매개변수는 항상 null 이지만 메뉴 네비게이트에 의해 `DoInitialize` 메서드가 호출된 경우에는 메뉴 네비게이트 메서드들(`Navigate`, `MoveTo` 등)이 전달한 매개변수가 전달됩니다.
 
 다음은 `IFxView.DoInitialize` 메서드를 구현하는 [FoxForm](/winform/foxform.md)의 `OnViewInitialize` 메서드를 구현하는 예를 보여줍니다. `FoxForm` 클래스는 `IFoxView` 인터페이스를 구현하고 있으며 `IFoxView.DoInitialize` 메서드가 호출되면 `OnViewInitialize` 메서드를 호출합니다.
 

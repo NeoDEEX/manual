@@ -5,12 +5,12 @@ Fox UI Model에서 모듈 로더는 뷰를 화면에 표시하기 위해 [메뉴
 목차
 
 * [FoxModuleLoader](#FoxModuleLoader)
-* [어셈블리 경로](#%EC%96%B4%EC%85%88%EB%B8%94%EB%A6%AC%20%EA%B2%BD%EB%A1%9C)
-* [모듈 로더와 어플리케이션 배포 방식](#%EB%AA%A8%EB%93%88%20%EB%A1%9C%EB%8D%94%EC%99%80%20%EC%96%B4%ED%94%8C%EB%A6%AC%EC%BC%80%EC%9D%B4%EC%85%98%20%EB%B0%B0%ED%8F%AC%20%EB%B0%A9%EC%8B%9D)
+* [어셈블리 경로](#어셈블리-경로)
+* [모듈 로더와 어플리케이션 배포 방식](#모듈-로더와-어플리케이션-배포-방식)
 
 ## FoxModuleLoader
 
-`FoxModuleLoader` 객체는 `FoxMenuViewModel` 객체가 초기화 될 때 생성되어 `ModuleLoader` 속성에 기록됩니다. `FoxMenuViewModel` 객체의 [SelectMenu 메서드가 호출되어 뷰 객체를 생성해야 한다면](menuview.md#%EB%A9%94%EB%89%B4%20Action%20-%20Open), `FoxMenuViewModel`은 [FoxViewModel](view.md#FoxViewModel) 객체를 생성하고 `FoxModuleLoader` 클래스의 유일한 public 메서드인 `CreateView` 메서드를 호출합니다.
+`FoxModuleLoader` 객체는 `FoxMenuViewModel` 객체가 초기화 될 때 생성되어 `ModuleLoader` 속성에 기록됩니다. `FoxMenuViewModel` 객체의 [SelectMenu 메서드가 호출되어 뷰 객체를 생성해야 한다면](menuview.md#메뉴-Action---Open), `FoxMenuViewModel`은 [FoxViewModel](view.md#FoxViewModel) 객체를 생성하고 `FoxModuleLoader` 클래스의 유일한 public 메서드인 `CreateView` 메서드를 호출합니다.
 
 `CreateView` 메서드는 `FoxViewModel` 객체의 `MenuItem` 속성으로부터 [FoxMenuItem](menudata.md#FoxMenuItem) 객체를 얻어내고 이 객체의 `Url` 속성을 이용하여 어셈블리를 로드합니다. 이때 `FoxModuleLoader`는 `Url` 속성 값에 따라 인터넷에서 DLL을 다운로드 할 수도 있습니다. 또, `FoxModuleLoader`는 `FoxMenuItem` 객체의 `ClassName` 속성을 사용하여 로드한 DLL로부터 뷰 객체를 생성합니다. 그리고 이 뷰 객체가 `IFoxView` 인터페이스를 구현하고 있는지도 확인 합니다. 만약 생성한 뷰 객체가 `IFoxView` 인터페이스를 구현하고 있지 않다면 `InvalidCastException` 예외를 유발합니다.
 
@@ -44,6 +44,6 @@ NeoDEEX 4.5 버전부터 제공되는 [Fox Updater](/updater/introduction.md)를
 
 ### 개발 환경
 
-개발 환경에서는 Visual Studio에서 어플리케이션이 구동되기 때문에 ClickOnce 배포 상황이 아닙니다. FoxModuleLoader가 메뉴 정보의 내용을 사용하여 개발 중인 어셈블리를 로드하도록 하기 위해서는 빌드 결과 EXE 및 DLL 들이 하나의 디렉터리에 모이도록 솔루션의 프로젝트들의 빌드 출력 디렉터리(Output Directory)를 조정해 주는 것이 좋습니다. 구체적인 방법에 대해서는 [STEP 3 – 뷰 작성 예제](tutorial.md#STEP%203%20%E2%80%93%20%EB%B7%B0%20%EC%9E%91%EC%84%B1)를 참고 하십시오.
+개발 환경에서는 Visual Studio에서 어플리케이션이 구동되기 때문에 ClickOnce 배포 상황이 아닙니다. FoxModuleLoader가 메뉴 정보의 내용을 사용하여 개발 중인 어셈블리를 로드하도록 하기 위해서는 빌드 결과 EXE 및 DLL 들이 하나의 디렉터리에 모이도록 솔루션의 프로젝트들의 빌드 출력 디렉터리(Output Directory)를 조정해 주는 것이 좋습니다. 구체적인 방법에 대해서는 [STEP 3 – 뷰 작성 예제](tutorial.md#STEP-3-–-뷰-작성)를 참고 하십시오.
 
 ---

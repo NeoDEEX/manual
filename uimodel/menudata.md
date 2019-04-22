@@ -6,9 +6,9 @@ Fox UI Model의 핵심은 XML 혹은 데이터베이스로부터 메뉴 정보�
 
 * [FoxMenuManager 클래스](#FoxMenuManager)
 * [FoxMenuItem 클래스](#FoxMenuItem)
-* [메뉴 객체 모델](#%EB%A9%94%EB%89%B4%20%EA%B0%9D%EC%B2%B4%20%EB%AA%A8%EB%8D%B8)
-* [메뉴 XML](#%EB%A9%94%EB%89%B4%20XML)
-* [메뉴 확장](#%EB%A9%94%EB%89%B4%20%ED%99%95%EC%9E%A5)
+* [메뉴 객체 모델](#메뉴-객체-모델)
+* [메뉴 XML](#메뉴-XML)
+* [메뉴 확장](#메뉴-확장)
 
 ## FoxMenuManager
 
