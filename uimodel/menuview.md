@@ -1,6 +1,6 @@
 # 메뉴 뷰 (Menu View)
 
-[Fox UI Model](introduction.md)은 메뉴를 UI 적으로 표현하는 메뉴 화면을 위한 프로그래밍 뼈대를 제공합니다. 대개 메인 화면이라 불리기도 하는 메뉴 뷰(Menu View)는 [IFoxMenuIVew](#IFoxMenuView) 인터페이스를 구현하는 UI 클래스 입니다. Windows Forms 기반의 어플리케이션이라면 `IFoxMenuView` 인터페이스를 구현하는 Form 클래스 혹은 그 파생 클래스가 메뉴 뷰 역할을 하게 되며, WPF 기반 어플리케이션 이라면 `IFoxMenuView` 인터페이스를 구현하는 Window 클래스 혹은 그 파생 클래스가 메뉴 뷰 역할을 하게 됩니다. [메뉴 작성 튜토리얼](tutorial.md)에서 `MainForm` 클래스가 바로 메뉴 뷰 입니다.
+[Fox UI Model](introduction.md)은 메뉴를 UI 적으로 표현하는 메뉴 화면을 위한 프로그래밍 뼈대를 제공합니다. 대개 메인 화면이라 불리기도 하는 메뉴 뷰(Menu View)는 [IFoxMenuView](#IFoxMenuView) 인터페이스를 구현하는 UI 클래스 입니다. Windows Forms 기반의 어플리케이션이라면 `IFoxMenuView` 인터페이스를 구현하는 Form 클래스 혹은 그 파생 클래스가 메뉴 뷰 역할을 하게 되며, WPF 기반 어플리케이션 이라면 `IFoxMenuView` 인터페이스를 구현하는 Window 클래스 혹은 그 파생 클래스가 메뉴 뷰 역할을 하게 됩니다. [메뉴 작성 튜토리얼](tutorial.md)에서 `MainForm` 클래스가 바로 메뉴 뷰 입니다.
 
 이 섹션에서는 메뉴 뷰 구현을 위해 메뉴 정보를 조직하고 사용자가 메뉴를 선택할 때 DLL을 로드하는 등의 작업을 제어하는 메뉴 뷰 모델([FoxMenuViewModel](#FoxMenuViewModel))과 메뉴 뷰를 위한 IFoxMenuView 인터페이스에 대해 살펴보도록 하겠습니다.
 

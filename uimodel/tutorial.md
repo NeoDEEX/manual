@@ -7,9 +7,9 @@
 * [개요](#개요)
 * [STEP 1 - 메뉴 뷰 뼈대 작성](#STEP-1---메뉴-뷰-뼈대-작성)
 * [STEP 2 - 메뉴 로드 및 메뉴 표시](#STEP-2---메뉴-로드-및-메뉴-표시)
-* [STEP 3 – 뷰 작성](#STEP-3-–-뷰-작성)
-* [STEP 4 – 메뉴 선택 처리 및 뷰 표시](#STEP-4-–-메뉴-선택-처리-및-뷰-표시)
-* [STEP Bonus – 기능 추가](#STEP-Bonus-–-기능-추가)
+* [STEP 3 - 뷰 작성](#STEP-3---뷰-작성)
+* [STEP 4 - 메뉴 선택 처리 및 뷰 표시](#STEP-4---메뉴-선택-처리-및-뷰-표시)
+* [STEP Bonus - 기능 추가](#STEP-Bonus---기능-추가)
 
 ## 개요
 
@@ -41,7 +41,7 @@
 
 ## STEP 1 - 메뉴 뷰 뼈대 작성
 
-[STEP 1 예제 코드 보러 가기](https%3A%2F%2Fgithub.com%2FNeoDEEX%2FSamples%2Ftree%2Fmaster%2FUIModel%2FFox%20UI%20Model%20Sample%20-%20Step%20by%20Step%2FMenuSample%20-%20Step%201)
+[STEP 1 예제 코드 보러 가기](https://github.com/NeoDEEX/Samples/tree/master/UIModel/Fox%20UI%20Model%20Sample%20-%20Step%20by%20Step%2FMenuSample%20-%20Step%201)
 
 메뉴 뷰는 `IFoxMenuView` 인터페이스를 구현하는 UI 객체이므로 MainForm에 `IFoxMenuView` 인터페이스를 구현합니다. `TheOne.UIModel` 네임스페이스를 참조하고, `MainForm` 클래스가 `IFoxMenuView` 인터페이스를 구현하도록 다음과 같이 코드를 작성합니다.
 
@@ -106,7 +106,7 @@ public partial class MainForm : Form, IFoxMenuView
 
 ## STEP 2 - 메뉴 로드 및 메뉴 표시
 
-[STEP 2 예제 코드 보러 가기](https%3A%2F%2Fgithub.com%2FNeoDEEX%2FSamples%2Ftree%2Fmaster%2FUIModel%2FFox%20UI%20Model%20Sample%20-%20Step%20by%20Step%2FMenuSample%20-%20Step%202)
+[STEP 2 예제 코드 보러 가기](https://github.com/NeoDEEX/Samples/tree/master/UIModel/Fox%20UI%20Model%20Sample%20-%20Step%20by%20Step%2FMenuSample%20-%20Step%202)
 
 이제 메뉴 데이터를 작성하고 로드하고 표시하는 방법에 대해 살펴볼 것입니다. Fox UI Model은 계층적인 구조의 메뉴를 위한 데이터 구조를 제공합니다. 이 데이터 구조는 `FoxMenuManager` 클래스에 의해 관리됩니다. `FoxMenuManager` 클래스는 메뉴 데이터를 로드하고 로드된 메뉴 데이터를 `FoxMenuItem` 객체의 계층 구조로 관리합니다.
 
@@ -205,9 +205,9 @@ public partial class MainForm : Form, IFoxMenuView
 ![STEP2 수행 결과](images/tutorial-4.png)  
 [그림4. STEP2 수행 결과]
 
-## STEP 3 – 뷰 작성
+## STEP 3 - 뷰 작성
 
-[STEP 3 예제 코드 보러 가기%5D(https%3A%2F%2Fgithub.com%2FNeoDEEX%2FSamples%2Ftree%2Fmaster%2FUIModel%2FFox%20UI%20Model%20Sample%20-%20Step%20by%20Step%2FMenuSample%20-%20Step%203)
+[STEP 3 예제 코드 보러 가기](https://github.com/NeoDEEX/Samples/tree/master/UIModel/Fox%20UI%20Model%20Sample%20-%20Step%20by%20Step%2FMenuSample%20-%20Step%203)
 
 메뉴가 선택될 때 나타나는 개별 화면을 Fox UI Model에서는 뷰(view)라고 지칭합니다. 뷰는 [IFoxView](view.md#IFoxView) 인터페이스를 구현하는 UI 객체 입니다. WinForm 메뉴 환경이라면 `IFoxView` 인터페이스를 구현하는 `Form` 이나 `UserControl` 객체가 뷰가 될 것입니다 . 메뉴 뷰 모델(`FoxMenuViewModel`) 객체는 메뉴 정보를 통해 뷰 객체를 생성하고 뷰에 대한 정보를 뷰 모델(`FoxViewModel`) 객체에 기록하고 관리합니다. 메뉴 뷰 모델은 메뉴 뷰(`MainForm`)에게 생성된 뷰를 화면에 표시하도록 요청합니다.
 
@@ -258,7 +258,9 @@ public partial class SampleForm1 : FoxForm
 ![빌드 결과 폴더](images/tutorial-9.png)  
 [그림9. 빌드 결과 폴더]
 
-## STEP 4 – 메뉴 선택 처리 및 뷰 표시
+## STEP 4 - 메뉴 선택 처리 및 뷰 표시
+
+[STEP 4 예제 코드 보러 가기](https://github.com/NeoDEEX/Samples/tree/master/UIModel/Fox%20UI%20Model%20Sample%20-%20Step%20by%20Step%2FMenuSample%20-%20Step%204)
 
 이제, 풀다운 메뉴가 선택되었을 때 해당 화면을 로드하고 표시 하도록 메뉴 뷰를 수정해 보겠습니다.
 
@@ -485,7 +487,9 @@ private void MenuItem_Click(object sender, EventArgs e)
 ![동일한 뷰 열기 결과](images/tutorial-12.png)  
 [그림12. 동일한 뷰 열기 결과]
 
-## STEP Bonus – 기능 추가
+## STEP Bonus - 기능 추가
+
+[STEP Bonus 예제 보러 가기](https://github.com/NeoDEEX/Samples/tree/master/UIModel/Fox%20UI%20Model%20Sample%20-%20Step%20by%20Step/MenuSample%20-%20Step%20Bonus)
 
 지금까지의 예제는 닷넷 프레임워크의 기본 Windows Forms에 포함된 기능들 만을 사용하여 메뉴 뷰를 구성하였었습니다. 하지만 이들 기능만으로는 미려한 UI를 구성하기 어려우며 최신 트랜드의 사용자 경험(UX)을 구성하기 어렵습니다. 이번 예제는 기존 코드를 일부 수정하여 보다 미려한 메뉴 뷰를 작성해 볼 것입니다. 이 예제는 상용 컴포넌트인 DevExpress 컴포넌트를 사용할 것입니다. 이 예제에서 사용한 DevExpress 컴포넌트들은 Ribbon Control, Dock Manager, Document Manager 등 입니다. 이 문서에서 이들 컴포넌트에 대한 상세한 설명은 하지 않을 것입니다. DevExpress 컴포넌트 대신 Infragistics 나 Telerik, 그리고 ComponentOne 과 같은 상용 컴포넌트들도 모두 유사한 기능을 제공하기 때문에 어렵지 않게 비슷한 메뉴 뷰를 구성할 수 있습니다.
 
