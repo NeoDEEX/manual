@@ -1,6 +1,6 @@
 # 모듈 로더
 
-Fox UI Model에서 모듈 로더는 뷰를 화면에 표시하기 위해 [메뉴 데이터](menudata.md#FoxMenuItem)로부터 뷰 객체가 존재하는 어셈블리(DLL)를 로드하고 객체를 생성하는 역할을 담당합니다. **일반적으로 모듈 로더가 개발자 코드에서 직접 호출되는 경우는 거의 없습니다.** [FoxMenuViewModel](viewmodel.md#FoxMenuViewModel)은 필요에 따라 모듈 로더를 호출하여 어셈블리를 로드하고 뷰 객체를 생성합니다. `FoxMenuViewModel`이 사용하는 모듈 로더는 `ModuleLoader` 속성을 통해 제공되는 `FoxModuleLoader` 클래스, 혹은 그 파생 클래스 입니다.
+Fox UI Model에서 모듈 로더는 뷰를 화면에 표시하기 위해 [메뉴 데이터](menudata.md#FoxMenuItem)로부터 뷰 객체가 존재하는 어셈블리(DLL)를 로드하고 객체를 생성하는 역할을 담당합니다. **일반적으로 모듈 로더가 개발자 코드에서 직접 호출되는 경우는 거의 없습니다.** [FoxMenuViewModel](menuview.md#FoxMenuViewModel)은 필요에 따라 모듈 로더를 호출하여 어셈블리를 로드하고 뷰 객체를 생성합니다. `FoxMenuViewModel`이 사용하는 모듈 로더는 `ModuleLoader` 속성을 통해 제공되는 `FoxModuleLoader` 클래스, 혹은 그 파생 클래스 입니다.
 
 목차
 
