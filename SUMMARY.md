@@ -32,3 +32,12 @@
 
   * [How To : WCF 서비스 구성](webservice/bizservice/howto-wcf.md)
   * [How To : REST API 서비스 구성](/webservice/bizservice/howto-rest.md)
+
+### Fox Data Service
+
+* [Fox Data Service 개요](webservice/dataservice/introduction.md)
+
+* [서버 구성](webservice/dataservice/serverconfig.md)
+
+  * [How To : WCF 서비스 구성](webservice/dataservice/howto-wcf.md)
+  * [How To : REST API 서비스 구성](/webservice/dataservice/howto-rest.md)
