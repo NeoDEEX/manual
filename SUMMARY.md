@@ -26,7 +26,7 @@
 
 ### Fox Biz Service
 
-* [Fox Biz Service 개요](webservice/bizservice/introduction.md)
+* [Fox Biz Service 개요](webservice/bizservice/README.md)
 
 * [서버 구성](webservice/bizservice/serverconfig.md)
 
@@ -35,7 +35,7 @@
 
 ### Fox Data Service
 
-* [Fox Data Service 개요](webservice/dataservice/introduction.md)
+* [Fox Data Service 개요](webservice/dataservice/README.md)
 
 * [서버 구성](webservice/dataservice/serverconfig.md)
 
