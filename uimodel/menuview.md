@@ -1,6 +1,6 @@
 # 메뉴 뷰 (Menu View)
 
-[Fox UI Model](introduction.md)은 메뉴를 UI 적으로 표현하는 메뉴 화면을 위한 프로그래밍 뼈대를 제공합니다. 대개 메인 화면이라 불리기도 하는 메뉴 뷰(Menu View)는 [IFoxMenuView](#IFoxMenuView) 인터페이스를 구현하는 UI 클래스 입니다. Windows Forms 기반의 어플리케이션이라면 `IFoxMenuView` 인터페이스를 구현하는 Form 클래스 혹은 그 파생 클래스가 메뉴 뷰 역할을 하게 되며, WPF 기반 어플리케이션 이라면 `IFoxMenuView` 인터페이스를 구현하는 Window 클래스 혹은 그 파생 클래스가 메뉴 뷰 역할을 하게 됩니다. [메뉴 작성 튜토리얼](tutorial.md)에서 `MainForm` 클래스가 바로 메뉴 뷰 입니다.
+[Fox UI Model](README.md)은 메뉴를 UI 적으로 표현하는 메뉴 화면을 위한 프로그래밍 뼈대를 제공합니다. 대개 메인 화면이라 불리기도 하는 메뉴 뷰(Menu View)는 [IFoxMenuView](#IFoxMenuView) 인터페이스를 구현하는 UI 클래스 입니다. Windows Forms 기반의 어플리케이션이라면 `IFoxMenuView` 인터페이스를 구현하는 Form 클래스 혹은 그 파생 클래스가 메뉴 뷰 역할을 하게 되며, WPF 기반 어플리케이션 이라면 `IFoxMenuView` 인터페이스를 구현하는 Window 클래스 혹은 그 파생 클래스가 메뉴 뷰 역할을 하게 됩니다. [메뉴 작성 튜토리얼](tutorial.md)에서 `MainForm` 클래스가 바로 메뉴 뷰 입니다.
 
 이 섹션에서는 메뉴 뷰 구현을 위해 메뉴 정보를 조직하고 사용자가 메뉴를 선택할 때 DLL을 로드하는 등의 작업을 제어하는 메뉴 뷰 모델([FoxMenuViewModel](#FoxMenuViewModel))과 메뉴 뷰를 위한 IFoxMenuView 인터페이스에 대해 살펴보도록 하겠습니다.
 
@@ -61,7 +61,7 @@
 
 ## FoxMenuViewModel
 
-[Fox UI Model 개요](introduction.md)에서 살펴본 대로 메뉴 뷰가 작동하기 위해서는 다양한 클래스들의 도움을 받아야 합니다. 메뉴 정보를 담는 [FoxMenuManager](menudata.md#FoxMenuManager) 클래스, 동적으로 DLL을 로드하는 [FoxModuleLoader](moduleloader.md#FoxModuleLoader) 클래스, 뷰의 정보를 담는 [FoxViewModel](view.md#FoxViewModel) 클래스 등이 그 대표적인 예 입니다. 이러한 다양한 클래스들을 제어하는 컨트롤러 역할을 메뉴 뷰 모델이 수행합니다.
+[Fox UI Model 개요](README.md)에서 살펴본 대로 메뉴 뷰가 작동하기 위해서는 다양한 클래스들의 도움을 받아야 합니다. 메뉴 정보를 담는 [FoxMenuManager](menudata.md#FoxMenuManager) 클래스, 동적으로 DLL을 로드하는 [FoxModuleLoader](moduleloader.md#FoxModuleLoader) 클래스, 뷰의 정보를 담는 [FoxViewModel](view.md#FoxViewModel) 클래스 등이 그 대표적인 예 입니다. 이러한 다양한 클래스들을 제어하는 컨트롤러 역할을 메뉴 뷰 모델이 수행합니다.
 
 ![Fox UI Model 개요](images/introduction-2.png)  
 [Fox UI Model 개요]
@@ -359,7 +359,7 @@ public partial class MainForm : DevExpress.XtraBars.Ribbon.RibbonForm, IFoxMenuV
 
 `FoxMenuViewModel` 클래스는 메뉴 화면이 열리거나 활성화, 비활성화, 닫힐 때 통계 정보를 기록할 수 있도록 `DoViewStatusChanged` 이벤트를 발생시킵니다. 이 이벤트 핸들러를 통해 어떤 사용자가 어떤 메뉴를 선택했는지 알 수 있으며 이 정보를 처리할 수 있습니다. 정보를 처리하는 방법은 어플리케이션마다 다릅니다. 권장되는 구현 방식은 메뉴 통계 정보를 비동기적으로 서버에 전송하여 데이터베이스에 기록하는 방식 입니다.
 
-다음 코드는 [Fox Biz Service](/webservice/bizservice/introduction.md)를 사용하여 메뉴에 대한 통계 정보를 서버의 비즈니스 로직을 호출하는 `DoViewStatusChanged` 이벤트 핸들러 구현 예제 입니다.
+다음 코드는 [Fox Biz Service](/webservice/bizservice/README.md)를 사용하여 메뉴에 대한 통계 정보를 서버의 비즈니스 로직을 호출하는 `DoViewStatusChanged` 이벤트 핸들러 구현 예제 입니다.
 
 ```csharp
 _menuViewModel.DoViewStatusChanged += ViewStatusChanged;
@@ -411,7 +411,7 @@ if (String.IsNullOrWhiteSpace(maxCountString) == false)
 }
 ```
 
-최대 뷰의 개수를 초과하여 뷰를 열고자 할 때 발생하는 예외로 인해 어플리케이션이 종료되는 것을 막기 위해서는 `SelectMenu` 호출 시 `try~catch`를 통해 예외 처리를 수행하거나 [Fox WinForm](/winform/introduction.md)에서 제공하는 전역 예외 핸들러(`FoxExceptionHandler` 클래스)를 사용할 수 있습니다.
+최대 뷰의 개수를 초과하여 뷰를 열고자 할 때 발생하는 예외로 인해 어플리케이션이 종료되는 것을 막기 위해서는 `SelectMenu` 호출 시 `try~catch`를 통해 예외 처리를 수행하거나 [Fox WinForm](/winform/README.md)에서 제공하는 전역 예외 핸들러(`FoxExceptionHandler` 클래스)를 사용할 수 있습니다.
 
 ```csharp
 [STAThread]
