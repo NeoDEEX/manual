@@ -14,16 +14,16 @@ NeoDEEX에서 클라이언트가 서버를 호출하여 비즈니스 로직이�
 
 * [WCF 지원 기능들](features.md)
 
-  * 서비스 호스트 팩터리
+  * [서비스 호스트 팩터리](servicefactory.md)
 
-  * 바인딩 맵
+  * [바인딩 맵](bindingmap.md)
 
-  * 주소 맵
+  * [주소 맵](addressmap.md)
 
-  * 서비스 인증
+  * [WCF 서비스 인증](authentication.md)
 
-  * FoxClientFactory
+  * [클라이언트 팩터리(FoxClientFactory)](clientfactory.md)
 
-  * 메시지 압축
+  * [메시지 압축](compress.md)
 
 ---
