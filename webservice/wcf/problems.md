@@ -12,6 +12,8 @@ ASP.NET 웹 어플리케이션 상에서 WCF 서비스를 작성하는 전형적
 
 Visual Studio와 .NET Framework에서 제공하는 WCF 지원 기능은 위와 같은 작업을 손쉽게 시작할 수 있는 아이템 템플릿을 제공하여 작업을 좀 더 편리하게 해줍니다. 하지만 이러한 방식으로 수십 수백개의 서비스를 제공해야 하는 대규모 어플리케이션은 커다란 한계에 봉착합니다.
 
+> [전통적인 WCF 어플리케이션 예제 코드 보러가기](https://github.com/NeoDEEX/Samples/tree/master/WebService/WCF/Traditional%20WCF%20Sample)
+
 목차
 
 * [서버측 WCF 구성 설정의 문제점](#서버측-WCF-구성-설정의-문제점)
@@ -19,6 +21,7 @@ Visual Studio와 .NET Framework에서 제공하는 WCF 지원 기능은 위와 �
 * [클라이언트 측 WCF 구성 설정의 문제점](#클라이언트-측-WCF-구성-설정의-문제점)
 
 * [해결 방법](#해결-방법)
+
 
 ## 서버측 WCF 구성 설정의 문제점
 
