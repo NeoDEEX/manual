@@ -1,6 +1,11 @@
 # How-To: WCF 서비스 구성
 
-Fox Web Services가 제공하는 WCF 기능들을 활용하여 WCF 서비스를 구성하는 방법에 대해 단계적이고 상세하게 설명합니다.
+Fox Web Services가 제공하는 WCF 기능들을 활용하여 WCF 서비스를 구성하는 방법에 대해 단계적이고 상세하게 설명합니다. [그림1]에서 이 예제가 다루는 부분은 WCF 인터페이스를 선언하는 인터페이스 라이브러리와 WCF 서비스를 호스팅하는 웹 어플리케이션 부분에 해당합니다.
+
+![Fox Web Services 기반 WCF 서비스/클라이언트 구성도](images/howto-service-0.png)  
+[그림1. Fox Web Services 기반 WCF 서비스/클라이언트 구성도]
+
+> [Fox Web Service를 사용한 WCF 서비스 예제 보러 가기](https://github.com/NeoDEEX/Samples/tree/master/WebService/WCF/WCF%20Support%20Sample)
 
 목차
 

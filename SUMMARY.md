@@ -24,6 +24,32 @@
 
 ## Fox Web Service
 
+* [Fox Web Service 개요](webservice/README.md)
+
+* [전통적인 WCF 서비스 기반 어플리케이션의 문제점](webservice/problems.md)
+
+### WCF 지원 기능
+
+* [Fox Web Services를 사용하는 WCF 서비스 구성 예제](webservice/step-by-step.md)
+
+  * [How-to: WCF 서비스 구성](webservice/howto-service.md)
+
+  * [How-to: WCF 클라이언트 구성](webservice/howto-client.md)
+
+* [WCF 지원 기능들](webservice/features.md)
+
+  * [서비스 호스트 팩터리](webservice/servicefactory.md)
+
+  * [바인딩 맵](webservice/bindingmap.md)
+
+  * [주소 맵](webservice/addressmap.md)
+
+  * [WCF 서비스 인증](webservice/authentication.md)
+
+  * [클라이언트 팩터리(FoxClientFactory)](webservice/clientfactory.md)
+
+  * [메시지 압축](webservice/compress.md)
+
 ### Fox Biz Service
 
 * [Fox Biz Service 개요](webservice/bizservice/README.md)
@@ -31,6 +57,7 @@
 * [서버 구성](webservice/bizservice/serverconfig.md)
 
   * [How To : WCF 서비스 구성](webservice/bizservice/howto-wcf.md)
+
   * [How To : REST API 서비스 구성](/webservice/bizservice/howto-rest.md)
 
 ### Fox Data Service
@@ -40,4 +67,5 @@
 * [서버 구성](webservice/dataservice/serverconfig.md)
 
   * [How To : WCF 서비스 구성](webservice/dataservice/howto-wcf.md)
+  
   * [How To : REST API 서비스 구성](/webservice/dataservice/howto-rest.md)

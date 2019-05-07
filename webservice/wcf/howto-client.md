@@ -1,6 +1,11 @@
 # How-to: WCF 클라이언트 구성
 
-Fox Web Services가 제공하는 WCF 지원 기능을 사용하면 클라이언트 측에서 `서비스 참조(Service Reference)`를 사용하지 않고도 손쉽게 WCF 클라이언트를 작성할 수 있습니다.
+Fox Web Services가 제공하는 WCF 지원 기능을 사용하면 클라이언트 측에서 `서비스 참조(Service Reference)`를 사용하지 않고도 손쉽게 WCF 클라이언트를 작성할 수 있습니다. [그림1]에서 이 예제가 다루는 부분은 클라이언트 모듈 입니다. 클라이언트가 서비스 인터페이스 라이브러리를 참조하지만 인터페이스 라이브러리는 대개 [WCF 서비스 개발](howto-service.md#WCF-서비스-추가)과 동시에 이루어지기 때문에 이 예제에서는 다루지 않습니다.
+
+![Fox Web Services 기반 WCF 서비스/클라이언트 구성도](images/howto-client-0.png)  
+[그림1. Fox Web Services 기반 WCF 서비스/클라이언트 구성도]
+
+> [Fox Web Service를 사용한 WCF 클라이언트 예제 보러 가기](https://github.com/NeoDEEX/Samples/tree/master/WebService/WCF/WCF%20Support%20Sample/WcfClientApp)
 
 목차
 
@@ -26,7 +31,7 @@ WCF 클라이언트는 콘솔 어플리케이션, WinForm 어플리케이션, WP
 
 * `System.ServiceModel.dll`
 
-또한, 이 WCF 클라이언트는 서비스 참조를 사용하지 않기 때문에 WCF 서비스 인터페이스 타입을 알 수 있어야 합니다. 따라서 앞서 WCF 서비스 작성 시 만들어 두었던 서비스 인터페이스 라이브러리를 참조합니다. [그림1]은 프로젝트 참조를 통해 서비스 인터페이스 라이브러리를 참조하는 대화 상자를 보여주고 있습니다.
+또한, 이 WCF 클라이언트는 서비스 참조를 사용하지 않기 때문에 WCF 서비스 인터페이스 타입을 알 수 있어야 합니다. 따라서 [앞서 WCF 서비스 작성 시 만들어 두었던 서비스 인터페이스 라이브러리](howto-service.md#서비스-인터페이스-라이브러리-작성)를 참조합니다. [그림1]은 프로젝트 참조를 통해 서비스 인터페이스 라이브러리를 참조하는 대화 상자를 보여주고 있습니다.
 
 ![서비스 인터페이스 라이브러리 참조](images/howto-client-1.png)  
 [그림1. 서비스 인터페이스 라이브러리 참조]
