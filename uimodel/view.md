@@ -78,7 +78,7 @@ Fox UI Model에서 메뉴에 의해 표시되는 개별 화면을 뷰라고 합�
 
 * `Lock`/`Unlock` 메서드
 
-    [Fox WinForm](winform/introduction.md)에서 비동기 프로그래스 표시를 위한 참조 카운트 증감을 위한 메서드 입니다. 프레임워크 내부에서 사용하기 위한 메서드이며 IFoxView 인터페이스를 직접 구현하고자 하는 경우, NeoDEEX 기술팀에 문의하십시오.
+    [Fox WinForm](winform/README.md)에서 비동기 프로그래스 표시를 위한 참조 카운트 증감을 위한 메서드 입니다. 프레임워크 내부에서 사용하기 위한 메서드이며 IFoxView 인터페이스를 직접 구현하고자 하는 경우, NeoDEEX 기술팀에 문의하십시오.
 
 * `GetDesignTimeSecirytContext` 메서드
 

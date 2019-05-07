@@ -10,7 +10,7 @@
 
 ## Fox UI Model
 
-* [Fox UI Model 개요](uimodel/introduction.md)
+* [Fox UI Model 개요](uimodel/README.md)
 
 * [메뉴 작성 튜토리얼](uimodel/tutorial.md)
 
