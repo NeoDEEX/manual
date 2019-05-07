@@ -25,4 +25,14 @@
 
 * [How-to: WCF 클라이언트 구성](howto-client.md)
 
+  * [클라이언트 프로젝트 구성](howto-client.md#클라이언트-프로젝트-구성)
+
+  * [App.config 구성](howto-client.md#App.config-구성)
+
+  * [바인딩 맵과 주소 맵 구성](howto-client.md#바인딩-맵과-주소-맵-구성)
+
+  * [서비스 호출 코드 작성](howto-client.md#서비스-호출-코드-작성)
+
+  * [추가적인 서비스 호출](howto-client.md#추가적인-서비스-호출)
+
 ---
