@@ -49,20 +49,20 @@ Fox Web Services는 다 계층(n-tier) 분산 어플리케이션에서 클라이
 
     Fox Web Service 기반의 WCF 서비스에서 송/수신되는 메시지를 압축하는 방법에 대해 설명합니다.
 
-* [Fox Biz Service](webservice/bizservice/README.md)
+* [Fox Biz Service](bizservice/README.md)
 
-  * [서버 구성](webservice/bizservice/serverconfig.md)
+  * [서버 구성](bizservice/serverconfig.md)
 
-    * [How To : WCF 서비스 구성](webservice/bizservice/howto-wcf.md)
+    * [How To : WCF 서비스 및 클라이언트 구성](bizservice/howto-wcf.md)
 
-    * [How To : REST API 서비스 구성](/webservice/bizservice/howto-rest.md)
+    * [How To : REST API 서비스 및 클라이언트 구성](bizservice/howto-rest.md)
 
-* [Fox Data Service](webservice/dataservice/README.md)
+* [Fox Data Service](dataservice/README.md)
 
-  * [서버 구성](webservice/dataservice/serverconfig.md)
+  * [서버 구성](dataservice/serverconfig.md)
 
-    * [How To : WCF 서비스 구성](webservice/dataservice/howto-wcf.md)
+    * [How To : WCF 서비스 및 클라이언트 구성](dataservice/howto-wcf.md)
 
-    * [How To : REST API 서비스 구성](/webservice/dataservice/howto-rest.md)
+    * [How To : REST API 서비스 및 클라이언트 구성](dataservice/howto-rest.md)
 
 ---
