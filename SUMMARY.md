@@ -26,29 +26,29 @@
 
 * [Fox Web Service 개요](webservice/README.md)
 
-* [전통적인 WCF 서비스 기반 어플리케이션의 문제점](webservice/problems.md)
-
 ### WCF 지원 기능
 
-* [Fox Web Services를 사용하는 WCF 서비스 구성 예제](webservice/step-by-step.md)
+* [전통적인 WCF 서비스 기반 어플리케이션의 문제점](webservice/wcf/problems.md)
 
-  * [How-to: WCF 서비스 구성](webservice/howto-service.md)
+* [Fox Web Services를 사용하는 WCF 서비스 구성 예제](webservice/wcf/step-by-step.md)
 
-  * [How-to: WCF 클라이언트 구성](webservice/howto-client.md)
+  * [How-to: WCF 서비스 구성](webservice/wcf/howto-service.md)
 
-* [WCF 지원 기능들](webservice/features.md)
+  * [How-to: WCF 클라이언트 구성](webservice/wcf/howto-client.md)
 
-  * [서비스 호스트 팩터리](webservice/servicefactory.md)
+* [WCF 지원 기능들](webservice/wcf/features.md)
 
-  * [바인딩 맵](webservice/bindingmap.md)
+  * [서비스 호스트 팩터리](webservice/wcf/servicefactory.md)
 
-  * [주소 맵](webservice/addressmap.md)
+  * [바인딩 맵](webservice/wcf/bindingmap.md)
 
-  * [WCF 서비스 인증](webservice/authentication.md)
+  * [주소 맵](webservice/wcf/addressmap.md)
 
-  * [클라이언트 팩터리(FoxClientFactory)](webservice/clientfactory.md)
+  * [WCF 서비스 인증](webservice/wcf/authentication.md)
 
-  * [메시지 압축](webservice/compress.md)
+  * [클라이언트 팩터리(FoxClientFactory)](webservice/wcf/clientfactory.md)
+
+  * [메시지 압축](webservice/wcf/compress.md)
 
 ### Fox Biz Service
 
