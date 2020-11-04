@@ -93,7 +93,7 @@ NeoDEEX 4.5.6.x 버전에 대한 변경 사항들 중에서 주목해야 할 사
     ```json
     "parameters" : {
       "param1" : {
-        "type" : decimal,
+        "type" : "decimal",
         "value" : 100000000000006001   <= 유효 숫자가 잘리는 문제 발생
       }
     }
@@ -110,7 +110,7 @@ NeoDEEX 4.5.6.x 버전에 대한 변경 사항들 중에서 주목해야 할 사
     ```json
     "parameters" : {
       "param1" : {
-        "type" : decimal,
+        "type" : "decimal",
         "value" : "100000000000006001"
       }
     }
