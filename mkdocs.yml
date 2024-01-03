@@ -1,2 +1,4 @@
+site_name: NeoDEEX 4.x Documentation
+docs_dir: .
 theme:
   name: material
