@@ -1,10 +1,12 @@
 ---
-description: NeoDEEX 개발자 메뉴얼 대문 페이지(테스트)
+description: NeoDEEX 4.x 개발자 메뉴얼 대문 페이지(테스트)
 ---
 
 # Welcome
 
 NeoDEEX 개발자 메뉴얼에 오신것을 환영합니다. 이 문서는 개발자를 위한 NeoDEEX 설명서 입니다.
+
+⚠️ Legacy warning !!! 이 리포지터리는 .NET Framework 4.x 버전에서 작동하는 NeoDEEX 4.x 버전에 대한 내용입니다.
 
 ## NeoDEEX 란
 
